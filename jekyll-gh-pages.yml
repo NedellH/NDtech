@@ -1,0 +1,15 @@
+# Jekyll/GitHub Pages workflow uitgeschakeld — deze site gaat via Netlify live.
+# De originele workflow bouwde bij elke push met Jekyll en publiceerde naar GitHub
+# Pages, wat botst met de gecompileerde bestanden in dist/.
+#
+# Wil je dit terug? Haal het bestand uit de repo-geschiedenis terug of verwijder
+# deze regels en zet het `on:`-blok weer aan.
+
+name: Disabled — deploy runs on Netlify
+on: workflow_dispatch
+
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploys are handled by Netlify (publish directory: dist)."

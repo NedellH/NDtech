@@ -1,0 +1,24 @@
+[build]
+  publish = "dist"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/status.json"
+  [headers.values]
+    Cache-Control = "public, max-age=30"
+
+[[redirects]]
+  from = "/intake"
+  to = "/funnel.html"
+  status = 200
+
+[[redirects]]
+  from = "/funnel"
+  to = "/funnel.html"
+  status = 200
