@@ -1,0 +1,6 @@
+# Geen build-artefacten of losse rommel in de repo
+.DS_Store
+Thumbs.db
+node_modules/
+scratch/
+screenshots/
